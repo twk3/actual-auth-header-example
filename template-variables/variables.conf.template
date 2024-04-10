@@ -1,0 +1,7 @@
+map $host $actual_address {
+  default "$ACTUAL_ADDRESS";
+}
+
+map $host $actual_password {
+    default "$ACTUAL_PASSWORD";
+}

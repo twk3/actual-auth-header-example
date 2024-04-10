@@ -1,0 +1,12 @@
+---
+services:
+  proxy:
+    image: nginx:latest
+    ports:
+      - '$PROXY_PORT:8080'
+    env_file:
+      - .env
+    volumes:
+      - ./nginx-data:/etc/nginx/conf.d
+      - ./template-variables/variables.conf.template:/etc/nginx/templates/10-variables.conf.template
+    restart: always
